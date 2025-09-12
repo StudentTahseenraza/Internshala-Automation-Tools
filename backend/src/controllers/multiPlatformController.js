@@ -138,7 +138,7 @@ const fetchFromJSearch = async ({ skills, field, minStipend, maxStipend }, retri
             method: 'GET',
             headers: {
                 'x-rapidapi-host': 'jsearch.p.rapidapi.com',
-                'x-rapidapi-key': process.env.RAPIDAPI_KEY || 'c3335da44bmshe18bb9fec9ac1e9p1e6257jsn64a0c97c8f1a'
+                'x-rapidapi-key': process.env.RAPIDAPI_KEY
             }
         });
 
