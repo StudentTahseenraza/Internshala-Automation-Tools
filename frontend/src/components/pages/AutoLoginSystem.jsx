@@ -8,6 +8,9 @@ function AutoLoginSystem({ title, description }) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
+        const API_BASE = import.meta.env.VITE_API_URL;
+
+
     const handleAutoLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -15,7 +18,7 @@ function AutoLoginSystem({ title, description }) {
         setStatus('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auto-login', {
+            const response = await axios.post(`${API_BASE}/api/auto-login`, {
                 email,
                 password
             }, { timeout: 120000 });

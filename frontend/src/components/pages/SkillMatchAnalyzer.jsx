@@ -13,6 +13,9 @@ function SkillMatchAnalyzer({ title, description }) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
+        const API_BASE = import.meta.env.VITE_API_URL;
+
+
     // Set the worker source dynamically using import.meta.url
     pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.js', import.meta.url).toString();
 
@@ -83,7 +86,7 @@ function SkillMatchAnalyzer({ title, description }) {
         console.log('Sending payload to backend:', payload);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/skill-match', payload, {
+            const response = await axios.post(`${API_BASE}/api/skill-match`, payload, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -119,7 +122,7 @@ function SkillMatchAnalyzer({ title, description }) {
             }
 
             // Send the text and missing skills to the backend to generate a PDF
-            const response = await axios.post('http://localhost:5000/api/generate-improved-resume', {
+            const response = await axios.post(`${API_BASE}/api/generate-improved-resume`, {
                 text,
                 missingSkills
             }, {

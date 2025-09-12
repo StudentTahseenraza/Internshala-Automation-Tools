@@ -8,6 +8,9 @@ function TelegramEmailAlerts() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
+        const API_BASE = import.meta.env.VITE_API_URL;
+
+
     const handleSave = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -15,7 +18,7 @@ function TelegramEmailAlerts() {
         setMessage('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/alerts', {
+            const response = await axios.post(`${API_BASE}/api/alerts`, {
                 email,
                 telegramId
             });

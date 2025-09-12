@@ -39,6 +39,9 @@ const MultiPlatformSupport = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [apiErrors, setApiErrors] = useState({});
 
+        const API_BASE = import.meta.env.VITE_API_URL;
+
+
     const handlePlatformChange = (platform) => {
         if (platform === 'All') {
             const newValue = !allPlatforms;
@@ -74,7 +77,7 @@ const MultiPlatformSupport = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/jobs', {
+            const response = await fetch(`${API_BASE}/api/jobs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ platforms: selectedPlatforms, skills, field, minStipend, maxStipend })
@@ -114,7 +117,7 @@ const MultiPlatformSupport = () => {
         formData.append('platform', job.source);
 
         try {
-            const response = await fetch('http://localhost:5000/api/auto-apply', {
+            const response = await fetch(`${API_BASE}/api/auto-apply`, {
                 method: 'POST',
                 body: formData
             });

@@ -13,6 +13,10 @@ function AIResumeOptimization() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
+
+    const API_BASE = import.meta.env.VITE_API_URL;
+
+
     // Set the worker source dynamically using import.meta.url
     pdfjsLib.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.js', import.meta.url).toString();
 
@@ -60,7 +64,7 @@ function AIResumeOptimization() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/resume-optimize', {
+            const response = await axios.post(`${API_BASE}/api/resume-optimize`, {
                 jobDescription,
                 resumeText
             });

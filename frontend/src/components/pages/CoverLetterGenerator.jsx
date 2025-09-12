@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './CoverLetterGenerator.css';
 
+    const API_BASE = import.meta.env.VITE_API_URL;
+
+
 function CoverLetterGenerator() {
     const [formData, setFormData] = useState({
         name: '',
@@ -21,7 +24,7 @@ function CoverLetterGenerator() {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch('http://localhost:5000/api/cover-letter', {
+            const response = await fetch(`${API_BASE}/api/cover-letter`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

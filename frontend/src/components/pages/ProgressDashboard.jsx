@@ -5,11 +5,13 @@ import { Pie, Bar } from 'react-chartjs-2'; // Import chart components
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement } from 'chart.js'; // Import Chart.js components
 import './ProgressDashboard.css';
 
-// Register Chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
+    const API_BASE = import.meta.env.VITE_API_URL;
+
+    // Register Chart.js components
+    ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 
 // Connect to WebSocket server
-const socket = io('http://localhost:5000', {
+const socket = io(`${API_BASE}`, {
     reconnection: true,
     reconnectionAttempts: 5,
 });
@@ -28,7 +30,7 @@ const ProgressDashboard = () => {
     useEffect(() => {
         const fetchInitialData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/progress');
+                const response = await axios.get(`${API_BASE}/api/progress`);
                 setProgressData(response.data);
             } catch (err) {
                 console.error('Failed to fetch initial progress data:', err);
