@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.02);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Scheduler Button */
+.scheduler-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.scheduler-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.scheduler-status {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Back to Home Link */
+.back-home {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-home:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Feature Card */
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.feature-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover i {
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Feature Page */
+.feature-page {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.feature-page h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #f2eaea;
+}
+
+.feature-page p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Feature Form */
+.feature-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.feature-form label {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.feature-form input,
+.feature-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.feature-form input:focus,
+.feature-form textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.feature-form textarea {
+    resize: vertical;
+}
+
+.feature-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2156b7;
+    color: #08050c;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-form button:hover {
+    transform: translateY(-2px);
+    background: #4fa1b1;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.result h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.result p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Placeholder */
+.placeholder {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.placeholder p {
+    font-style: italic;
+}
+
+/* Add this to the existing App.css */
+
+/* Download Button */
+.download-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #6e48aa;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    background: #f0f0f0;
+}
+
+/* Add this to the existing App.css */
+
+/* File Input */
+.feature-form input[type="file"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-form input[type="file"]::-webkit-file-upload-button {
+    background: #fff;
+    color: #6e48aa;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.feature-form input[type="file"]::-webkit-file-upload-button:hover {
+    background: #f0f0f0;
+}
+
+.footer-spacer {
+    height: 100px; /* Adjust based on your footer height */
+    background: transparent;
+    padding-top: 50px;
+    position: relative;
+    z-index: 1; /* Ensure it appears above the footer */
+    width: 100%;
+    margin-right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px; /* Match the container width */
+    
+}
+.footer-spacer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    z-index: -1; /* Ensure it stays behind the content */
+}
+.footer-spacer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust based on your footer height */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), transparent);
+    z-index: -1; /* Ensure it stays behind the content */
+}

@@ -1,0 +1,345 @@
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+    --secondary-color: #2ecc71;
+    --secondary-hover: #27ae60;
+    --error-color: #e74c3c;
+    --text-color: #2c3e50;
+    --background-color: #f9f9f9;
+    --border-color: #ddd;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Main container */
+.feature-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Headings */
+.feature-page h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.feature-page p {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Platform Selection Section */
+.platform-selection {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.platform-selection h3 {
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Custom Checkbox Styling */
+.platform-selection label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 10px 20px;
+    background: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+.platform-selection input[type="checkbox"] {
+    display: none;
+}
+
+.platform-selection label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #fff;
+    transition: var(--transition);
+}
+
+.platform-selection input[type="checkbox"]:checked + label::before {
+    background: var(--primary-color);
+    border-color: var(--primary-hover);
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+.platform-selection label:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-hover);
+}
+
+.platform-selection input[type="checkbox"]:checked + label {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-hover);
+}
+
+/* Search Parameters Section (Form) */
+.search-params {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.search-params h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.search-params label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.search-params label span {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.search-params input {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-params input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.search-params input::placeholder {
+    color: #7f8c8d;
+}
+
+/* Resume Upload Section */
+.resume-upload {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.resume-upload label {
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.resume-upload input[type="file"] {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: var(--transition);
+}
+
+.resume-upload input[type="file"]:hover {
+    border-color: var(--primary-color);
+}
+
+/* Main Action Button */
+.feature-page button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.feature-page button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.feature-page button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Error Message */
+.feature-page .error {
+    color: var(--error-color);
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Job Listings */
+.platform-management-tools {
+    margin-top: 30px;
+}
+
+.platform-management-tools h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.platform-management-tools ul {
+    list-style: none;
+    padding: 0;
+}
+
+.platform-management-tools li {
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.platform-management-tools li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.platform-management-tools p {
+    margin: 8px 0;
+    color: #34495e;
+    font-size: 1rem;
+}
+
+.platform-management-tools p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.platform-management-tools p a:hover {
+    text-decoration: underline;
+}
+
+.platform-management-tools button {
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.platform-management-tools button:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-2px);
+}
+
+.platform-management-tools button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Application Analysis */
+.application-analysis {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e8f4f8;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.application-analysis h4 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.application-analysis p {
+    margin: 8px 0;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .feature-page {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .platform-selection, .search-params {
+        gap: 10px;
+    }
+
+    .search-params input {
+        width: 100%;
+    }
+
+    .feature-page button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .platform-management-tools li {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,133 @@
+.amazon-footer {
+    background: #131921; /* Dark color similar to Amazon */
+    color: #ddd;
+    padding: 40px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Ensure footer takes full width */
+    margin: 0; /* Remove any margins that might cause misalignment */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    position: relative; /* Ensure footer stays in the document flow */
+}
+
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #3a4553;
+    width: 100%; /* Ensure content spans the container */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left for consistency */
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a,
+.footer-column ul li p {
+    color: #ddd;
+    font-size: 0.95em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ff9900; /* Amazon's orange hover color */
+    text-decoration: underline;
+}
+
+.footer-column .about-text {
+    color: #ddd;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: center;
+    padding-top: 20px;
+    width: 100%; /* Ensure bottom section spans the container */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-logo i {
+    font-size: 1.5em;
+    color: #ff9900;
+}
+
+.footer-logo span {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ddd;
+    font-size: 0.9em;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9900;
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    color: #999;
+    font-size: 0.85em;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center; /* Center columns */
+    }
+
+    .footer-column {
+        text-align: center; /* Center text on smaller screens */
+        margin-bottom: 30px; /* Add spacing between columns */
+    }
+
+    .footer-links a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+}
